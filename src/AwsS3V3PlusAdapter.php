@@ -209,7 +209,7 @@ class AwsS3V3PlusAdapter extends FilesystemAdapter
     }
 
     /**
-     * @return Collection<int, array{hash: string, key: string, version: string, type: string, latest: bool, updatedAt: CarbonImmutable, size: int}>
+     * @return Collection<int, array{id: string, hash: string, key: string, type: string, latest: bool, updatedAt: CarbonImmutable, size: int}>
      *
      * @throws UnableToListVersions
      */
