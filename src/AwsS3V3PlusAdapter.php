@@ -75,7 +75,7 @@ class AwsS3V3PlusAdapter extends FilesystemAdapter
      * @throws LogicException
      * @throws InvalidArgumentException
      */
-    public function temporaryUrl($path, $expiration, array $options = [], string $versionId = null)
+    public function temporaryUrl($path, $expiration, array $options = [], ?string $versionId = null)
     {
         $version = $versionId ? ['VersionId' => $versionId] : [];
 
@@ -324,7 +324,7 @@ class AwsS3V3PlusAdapter extends FilesystemAdapter
     /**
      * @throws Throwable|UnableToRestoreFile
      */
-    public function restore(string $path, string $versionId = null): bool
+    public function restore(string $path, ?string $versionId = null): bool
     {
         $success = true;
 
